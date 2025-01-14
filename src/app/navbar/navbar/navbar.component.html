@@ -1,0 +1,43 @@
+<mat-drawer-container class="container" autosize>
+    <mat-toolbar>
+        <span>SISRH - Sistema de Recursos Humanos</span>
+      </mat-toolbar>
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <mat-toolbar>
+            <span><style> 
+                img{
+                    margin-left: 15px;
+                    margin-top: 9px;
+                }
+            </style><img src="./assets/img/brasao_pcac.png" alt="logo" height="50px"  ></span>
+          </mat-toolbar>
+          
+      <mat-nav-list class="nav-list">
+        <a mat-list-item routerLink="/">
+          <i class="material-icons">home</i>
+          Home
+        </a>
+        <a mat-list-item routerLink="/">
+          <i class="material-icons">home</i>
+          Home
+        </a>
+        <a mat-list-item routerLink="/">
+          <i class="material-icons">add</i>
+           Servidor
+        </a>
+        <a mat-list-item routerLink="/">
+          <i class="material-icons">home</i>
+          Home
+        </a>
+        
+      </mat-nav-list>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        <i class="material-icons">menu</i>
+      </button>
+    </div>
+    <div class="tabela"><app-table ></app-table>
+    </div>    
+  </mat-drawer-container>

@@ -1,0 +1,36 @@
+
+  <table mat-table [dataSource]="dadosTabela" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+    
+      <!-- Position Column -->
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef> nome </th>
+        <td mat-cell *matCellDef="let tablela"> {{tablela.nome}} </td>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="matricula">
+        <th mat-header-cell *matHeaderCellDef> matricula </th>
+        <td mat-cell *matCellDef="let tabela"> {{tabela.matricula}} </td>
+      </ng-container>
+    
+      <!-- Weight Column -->
+      <ng-container matColumnDef="cargo">
+        <th mat-header-cell *matHeaderCellDef> Cargo </th>
+        <td mat-cell *matCellDef="let tabela"> {{tabela.cargo}} </td>
+      </ng-container>
+    
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="lotacao">
+        <th mat-header-cell *matHeaderCellDef> lotacao </th>
+        <td mat-cell *matCellDef="let tabela"> {{tabela.locatacao}} </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+  
+  
